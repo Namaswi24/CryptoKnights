@@ -1,6 +1,6 @@
 # CryptoKnights
 
-<h3>Assignment: </h3> - Peer-to-Peer Chat Application 
+<h3>Assignment :  Peer-to-Peer Chat Application </h3> 
 
 <h3>Team Name   -   "CryptoKnights" </h3>
 
