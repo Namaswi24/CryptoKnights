@@ -31,11 +31,23 @@ can be run in seperate terminal environments to form a peer to peer chat network
  2. Enter your name.(Ex:Peer1) <br>
  3. Enter your port number.<br>
  4. Once a peer is running, the following options are available: <br>
-     Option	Descriptio : <br>
-       1.Send a message to a specific peer <br>
-       2.Display the list of active peers <br>
-       3.Connect to all active peers <br>
-       0.Exit the application. <br>
+     <table>
+  <tr>
+    <th>Option Description</th>
+  </tr>
+  <tr>
+    <td>1. Send a message to a specific peer</td>
+  </tr>
+  <tr>
+    <td>2. Display the list of active peers</td>
+  </tr>
+  <tr>
+    <td>3. Connect to all active peers</td>
+  </tr>
+  <tr>
+    <td>0. Exit the application</td>
+  </tr>
+</table>
     You can select the above options <br>
     If you select the option  1: <br>
         •Enter the recipients IP address <br>
