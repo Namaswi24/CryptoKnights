@@ -2,9 +2,9 @@
 
 <h3>Assignment : </h3> - Peer-to-Peer Chat Application <br>
 
-<h3>Team Name   -   "CryptoKnights" </h3><br>
+<h3>Team Name   -   "CryptoKnights" </h3>
 
-<h3>Team Members : </h3><br>
+<h3>Team Members : </h3>
   Janapareddy Vidya Varshini  -    mc230041013 <br>
   Korubilli Vaishnavi         -    mc230041016 <br>
   Mullapudi Namaswi           -    mc230041023 <br>
@@ -16,7 +16,7 @@ sending and receiving messages simultaneously, supports multiple peers, and allo
 and retrieve the list of peers from which it had received messages. Multiple instances of the code
 can be run in seperate terminal environments to form a peer to peer chat network. 
 
-✦<h3>Concepts Involved: </h3> <br>
+✦<h3>Concepts Involved: </h3> 
   1. Peer-to-Peer Networking <br>
   2. Socket Programming <br>
   3. Multithreading <br>
