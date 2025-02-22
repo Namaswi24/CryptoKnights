@@ -26,7 +26,7 @@ can be run in seperate terminal environments to form a peer to peer chat network
   7. Connection Management <br>
   8. User Interface <br>
  
-✦ <h3>How to run the code : </h3> <br>
+✦ <h3>How to run the code : </h3> 
  1. Run the python file in the command prompt or terminal. <br>
  2. Enter your name.(Ex:Peer1) <br>
  3. Enter your port number.<br>
