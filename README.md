@@ -1,22 +1,22 @@
 # CryptoKnights
 
-<h3>Assignment</h3> - : Peer-to-Peer Chat Application <br>
+<h3>Assignment : </h3> - Peer-to-Peer Chat Application <br>
 
 <h3>Team Name   -   "CryptoKnights" </h3><br>
 
-<h3>Team Members</h3> :<br>
+<h3>Team Members : </h3><br>
   Janapareddy Vidya Varshini  -    mc230041013 <br>
   Korubilli Vaishnavi         -    mc230041016 <br>
   Mullapudi Namaswi           -    mc230041023 <br>
 
- ✦ <h3>Note</h3> : Our code handles the Bonus question also. <br>
+ ✦ <h3>Note : </h3> Our code handles the Bonus question also. <br>
 
 Through this code we implemented  a peer-to-peer chat program in Python  that enables simultaneous 
 sending and receiving messages simultaneously, supports multiple peers, and allows users to query 
 and retrieve the list of peers from which it had received messages. Multiple instances of the code
 can be run in seperate terminal environments to form a peer to peer chat network. 
 
-✦<h3>Concepts Involved </h3>: <br>
+✦<h3>Concepts Involved: </h3> <br>
   1. Peer-to-Peer Networking <br>
   2. Socket Programming <br>
   3. Multithreading <br>
@@ -26,7 +26,7 @@ can be run in seperate terminal environments to form a peer to peer chat network
   7. Connection Management <br>
   8. User Interface <br>
  
-✦ <h3>How to run the code</h3> : <br>
+✦ <h3>How to run the code : </h3> <br>
  1. Run the python file in the command prompt or terminal. <br>
  2. Enter your name.(Ex:Peer1) <br>
  3. Enter your port number.<br>
