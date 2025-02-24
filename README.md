@@ -68,19 +68,19 @@ Each peer runs a *TCP server* on a specified port to listen for incoming connect
   
   <h4>✦Menu Options</h4>
   
-   <h3>Option 1: Send Message</h3>
+   <h3>Option 1 : Send Message</h3>
     Manually send a message to a known peer.<br>
     Enter the peer’s IP address and port number<br>
     Type your message<br>
-    <h3>Option 2:Query Active Peers</h3>
+    <h3>Option 2 : Query Active Peers</h3>
     Displays a list of all active peers and their connection status.<br>
-    <h3>Option 3:Connect to Active Peers</h3>
+    <h3>Option 3 : Connect to Active Peers</h3>
     Sends a "connect" message to all previously discovered active peers.<br>
     Useful if you manually added new peers but haven't communicated yet.<br>
-    <h3>Option 4:Quit</h3>
+    <h3>Option 4 : Quit</h3>
     Exits the chat application gracefully.<br>
     Automatically disconnects from peers before shutting down.<br>
-    <h3>Option 4:If we message **exit** to a particular node then this sender gets removed from active peer of that particular receiver port</h3>
+    <h3>Option 5 : If we message **exit** to a particular node then this sender gets removed from active peer of that particular receiver port</h3>
     
     
    
