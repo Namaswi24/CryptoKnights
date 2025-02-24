@@ -80,7 +80,8 @@ Each peer runs a *TCP server* on a specified port to listen for incoming connect
     <h3>Option 4 : Quit</h3>
     Exits the chat application gracefully.<br>
     Automatically disconnects from peers before shutting down.<br>
-    <h3>Option 5 : If we message **exit** to a particular node then this sender gets removed from active peer of that particular receiver port</h3>
+    <h3>Option 5 :Exit </h3>
+    If we message **exit** to a particular node then this sender gets removed from active peer of that particular receiver port<br>
     
     
    
