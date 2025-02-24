@@ -77,10 +77,10 @@ Each peer runs a *TCP server* on a specified port to listen for incoming connect
     <h3>Option 3:Connect to Active Peers</h3>
     Sends a "connect" message to all previously discovered active peers.<br>
     Useful if you manually added new peers but haven't communicated yet.<br>
-    <h4>Option 4:Quit</h4>
+    <h3>Option 4:Quit</h3>
     Exits the chat application gracefully.<br>
     Automatically disconnects from peers before shutting down.<br>
-    <h4>Option 4:If we message **exit** to a particular node then this sender gets removed from active peer of that particular receiver port</h4>
+    <h3>Option 4:If we message **exit** to a particular node then this sender gets removed from active peer of that particular receiver port</h3>
     
     
    
