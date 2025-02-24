@@ -4,15 +4,15 @@ import threading
 class Peer:
     # List of static peers to attempt connection at startup
     STATIC_PEERS = [("10.206.4.122", 1255), ("10.206.5.228", 6555)]
-    
+
     def __init__(self, name, port):
         self.name = name  # Peer name
         self.port = port  # Port for communication
         self.peers = {}  # Dictionary to store active peers {(ip, port): name}
-        
+
         # Start the server thread to listen for connections
         threading.Thread(target=self.start_server, daemon=True).start()
-        
+
         # Connect to static peers on startup
         self.connect_to_static_peers()
 
@@ -30,49 +30,52 @@ class Peer:
     def handle_client(self, client_socket, addr):
         """Handle incoming messages from peers."""
         try:
-            data = client_socket.recv(1024).decode()
+            data = client_socket.recv(1024).decode().strip()
             if data:
-                sender_ip, sender_port, sender_name, message = data.split(" ", 3)
-                sender_port = int(sender_port)
+                try:
+                    sender_info, team_name, message = data.split(" ", 2)
+                    sender_ip, sender_port = sender_info.split(":")
+                    sender_port = int(sender_port)
 
-                if message.strip().lower() == "exit":
-                    # Remove peer if it disconnects
-                    if (sender_ip, sender_port) in self.peers:
-                        del self.peers[(sender_ip, sender_port)]
-                        print(f"[INFO] {sender_name} ({sender_ip}:{sender_port}) disconnected.")
-                else:
-                    # Update peer information
-                    self.peers[(sender_ip, sender_port)] = sender_name
-                    print(f"[{sender_name} ({sender_ip}:{sender_port})]: {message}")
+                    # Ensure correct format is maintained
+                    print(f"[{team_name} ({sender_ip}:{sender_port})]: {message}")
 
-                    if message.strip().lower() == "connect":
+                    # Update peers list when receiving any message
+                    self.peers[(sender_ip, sender_port)] = team_name  
+
+                    if message.strip().lower() == "exit":
+                        if (sender_ip, sender_port) in self.peers:
+                            del self.peers[(sender_ip, sender_port)]
+                            print(f"[INFO] {team_name} ({sender_ip}:{sender_port}) disconnected.")
+
+                    elif message.strip().lower() == "connect":
                         self.send_message(sender_ip, sender_port, "connect_ack")
                     
-                    if message.strip().lower() == "connect_ack":
-                        print(f"[INFO] Peer {sender_name} ({sender_ip}:{sender_port}) is now active.")
+                    elif message.strip().lower() == "connect_ack":
+                        self.peers[(sender_ip, sender_port)] = team_name  # Store as active peer
+                        print(f"[INFO] Peer {team_name} ({sender_ip}:{sender_port}) is now active.")
+                        
+                except ValueError:
+                    print(f"[ERROR] Invalid message format received: {data}")
             
             client_socket.close()
         except Exception as e:
             print(f"Error handling client {addr}: {e}")
 
     def send_message(self, target_ip, target_port, message):
-        """Send a message to a peer."""
+        """Send a message to a peer in the correct format."""
         try:
             client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             client_socket.settimeout(3)
             client_socket.connect((target_ip, target_port))
-            formatted_message = f"{socket.gethostbyname(socket.gethostname())} {self.port} {self.name} {message}"
+            
+            sender_ip = socket.gethostbyname(socket.gethostname())  # Get the sender's IP
+            formatted_message = f"{sender_ip}:{self.port} CRYPTOKNIGHTS {message}"  # Corrected format
+            
             client_socket.sendall(formatted_message.encode())
             client_socket.close()
 
-            if message.strip().lower() == "connect_ack":
-                self.peers[(target_ip, target_port)] = self.name
-
-            if message.strip().lower() == "exit":
-                if (target_ip, target_port) in self.peers:
-                    del self.peers[(target_ip, target_port)]
-                    print(f"[INFO] You disconnected from {target_ip}:{target_port}.")
-
+            print(f"[SUCCESS] Message sent: {formatted_message}")
             return True
         except Exception:
             print(f"[ERROR] Cannot send message to {target_ip}:{target_port}.")
@@ -149,7 +152,7 @@ class Peer:
                 print("Invalid choice. Try again.")
 
 # Initialize the peer
-if __name__ == "__main__": 
+if __name__ == "__main__":
     print("TEAM NAME : CRYPTOKNIGHTS ")
     name = input("Enter your name: ")
     port = int(input("Enter your port number: "))
