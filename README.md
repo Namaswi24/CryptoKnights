@@ -40,10 +40,9 @@ Each peer runs a *TCP server* on a specified port to listen for incoming connect
  1. Run the python file in the command prompt or in terminal. <br>
  2. Enter your name.(Ex:Peer1) <br>
  3. Enter your port number.<br>
- 4. Once a peer is running, the following options are available: 
- <br>
+ 4. Once a peer is running, the following options are available:  <br>
  
-     <table>
+  <table>
   <tr>
     <th>Option Description</th>
   </tr>
@@ -60,10 +59,16 @@ Each peer runs a *TCP server* on a specified port to listen for incoming connect
     <td>0. Exit the application</td>
   </tr>
 </table>
-    You can select the above options <br>
-    If you select the option  1: <br>
-        •Enter the recipients IP address <br>
-        •Enter the recipients port number <br>
+  <h3>🌐 How to Connect & Communicate</h3>
+   <h4>Connecting to Static Peers </h4> <br>
+   When a peer starts, it automatically attempts to connect to the following static peers:<br>
+   10.206.4.122:1255<br>
+   10.206.5.228:6555<br>
+  If a static peer is online, a successful connection is established and message is shown.
+  <h4>Menu Options</h4>
+  ![WhatsApp Image 2025-02-24 at 22 28 49_b0684e9c](https://github.com/user-attachments/assets/955d1d20-165b-4aca-9a60-c8558109c782)
+
+  
     
       
 
