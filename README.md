@@ -60,6 +60,7 @@ Each peer runs a *TCP server* on a specified port to listen for incoming connect
   </tr>
 </table>
   <h3>🌐 How to Connect & Communicate</h3>
+  
    <h4>✦Connecting to Static Peers </h4>
    When a peer starts, it automatically attempts to connect to the following static peers:<br>
    1.10.206.4.122:1255<br>
@@ -70,18 +71,28 @@ Each peer runs a *TCP server* on a specified port to listen for incoming connect
   
    <h3>Option 1 : Send Message</h3>
     Manually send a message to a known peer.<br>
-    Enter the peer’s IP address and port number<br>
-    Type your message<br>
+    The user must enter:<br>
+      1.The recipient's IP address.<br>
+      2.The recipient's port number.<br>
+      3.Then enter your message<br>
+      The system then: Establishes a connection to the target peer.<br>
+    And the message gets displayed to that peer<br>
+    If the connection fails, an error message is displayed.<br>
     <h3>Option 2 : Query Active Peers</h3>
     Displays a list of all active peers and their connection status.<br>
+    The system:<br>
+      1.Checks if previously stored peers are still online.<br>
+      2.Removes inactive peers from the list.<br>
+      3.Displays active peers along with their IP, port, and name.<br>
     <h3>Option 3 : Connect to Active Peers</h3>
     Sends a "connect" message to all previously discovered active peers.<br>
+    If a peer responds with "connect_ack", their name is updated in the list.<br>
     Useful if you manually added new peers but haven't communicated yet.<br>
     <h3>Option 4 : Quit</h3>
     Exits the chat application and goes to offline.<br>
     Automatically disconnects from peers before shutting down.<br>
     <h3>Option 5 :Exit </h3>
-    If we message **exit** to a particular node then this sender gets removed from active peer of that particular receiver port<br>
+    If we message **exit** to a particular peer then this sender(peer) gets removed from active peer of that particular receiver peer<br>
     
     
    
