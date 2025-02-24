@@ -11,10 +11,18 @@
 
  <h3> ✦ Note :  Our code handles the Bonus question also. </h3>
 
-Through this code we implemented  a peer-to-peer chat program in Python  that enables simultaneous 
+Through this code we implemented a peer-to-peer chat program in Python using sockets and threading that enables simultaneous 
 sending and receiving messages, supports multiple peers, and allows users to query 
-and retrieve the list of peers from which it had received messages. Multiple instances of the code
-can be run in seperate terminal environments to form a peer to peer chat network. 
+and retrieve the list of peers from which it had received messages. It also maintains a list of active peers and ensures connectivity with predefined static peers. Multiple instances of the code can be run in seperate terminal environments to form a peer to peer chat network. 
+
+<h3>✦ Features: </h3>
+1.Establish a server that listens for incoming connections from peers.<br>
+2.Send and receive messages between peers.<br>
+3.Automatically connect to a list of static peers upon startup.<br>
+4.Maintain a list of active peers and remove inactive ones.<br>
+5.User-friendly menu for managing connections and messaging.<br>
+6.Supports peer disconnection handling.<br>
+
 
 <h3>✦ Concepts Involved: </h3> 
   1. Peer-to-Peer Networking <br>
