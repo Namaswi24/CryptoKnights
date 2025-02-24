@@ -60,10 +60,10 @@ Each peer runs a *TCP server* on a specified port to listen for incoming connect
   </tr>
 </table>
   <h3>🌐 How to Connect & Communicate</h3>
-   <h4>Connecting to Static Peers </h4> <br>
+   <h4>✦Connecting to Static Peers </h4>
    When a peer starts, it automatically attempts to connect to the following static peers:<br>
-   10.206.4.122:1255<br>
-   10.206.5.228:6555<br>
+   1.10.206.4.122:1255<br>
+   2.10.206.5.228:6555<br>
   If a static peer is online, a successful connection is established and message is shown.<br>
   
   <h4>✦Menu Options</h4>
