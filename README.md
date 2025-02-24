@@ -64,9 +64,20 @@ Each peer runs a *TCP server* on a specified port to listen for incoming connect
    When a peer starts, it automatically attempts to connect to the following static peers:<br>
    10.206.4.122:1255<br>
    10.206.5.228:6555<br>
-  If a static peer is online, a successful connection is established and message is shown.
-  <h4>Menu Options</h4>
-  ![WhatsApp Image 2025-02-24 at 22 28 49_b0684e9c](https://github.com/user-attachments/assets/955d1d20-165b-4aca-9a60-c8558109c782)
+  If a static peer is online, a successful connection is established and message is shown.<br>
+  
+  <h4>✦Menu Options</h4>
+  
+   <h3>Option 1: Send Message</h3>
+    Manually send a message to a known peer.<br>
+    Enter the peer’s IP address and port number<br>
+    Type your message<br>
+    <h3>Option 2:Query Active Peers</h3>
+    Displays a list of all active peers and their connection status.<br>
+    
+   
+  
+  
 
   
     
