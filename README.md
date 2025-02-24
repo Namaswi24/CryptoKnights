@@ -15,7 +15,7 @@ Through this code we implemented a peer-to-peer chat program in Python using soc
 sending and receiving messages, supports multiple peers, and allows users to query 
 and retrieve the list of peers from which it had received messages. It also maintains a list of active peers and ensures connectivity with predefined static peers. Multiple instances of the code can be run in seperate terminal environments to form a peer to peer chat network. 
 
-<h3>✦ Features: </h3>
+<h3>✦🚀 Features: </h3>
 1.Establish a server that listens for incoming connections from peers.<br>
 2.Send and receive messages between peers.<br>
 3.Automatically connect to a list of static peers upon startup.<br>
@@ -23,6 +23,8 @@ and retrieve the list of peers from which it had received messages. It also main
 5.User-friendly menu for managing connections and messaging.<br>
 6.Supports peer disconnection handling.<br>
 
+<h3>📌 How It Works</h3>
+Each peer runs a *TCP server* on a specified port to listen for incoming connections. When a new peer starts, it attempts to connect to **static peers** and maintains an updated list of active peers.  
 
 <h3>✦ Concepts Involved: </h3> 
   1. Peer-to-Peer Networking <br>
@@ -35,7 +37,7 @@ and retrieve the list of peers from which it had received messages. It also main
   8. User Interface <br>
  
 <h3>✦ How to run the code : </h3> 
- 1. Run the python file in the command prompt or terminal. <br>
+ 1. Run the python file in the command prompt or in terminal. <br>
  2. Enter your name.(Ex:Peer1) <br>
  3. Enter your port number.<br>
  4. Once a peer is running, the following options are available: <br>
